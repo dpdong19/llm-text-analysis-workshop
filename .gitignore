@@ -1,0 +1,26 @@
+# Working files
+*.docx
+*.pptx
+*.zip
+airline-review-project/
+reference-materials/
+.claude/
+
+# Student folder — classify.py is the exercise; output is generated
+airline-review-workshop/classify.py
+airline-review-workshop/output/
+
+# Quarto render output
+quarto slides/_site/
+quarto slides/.quarto/
+quarto slides/workshop_first_draft.html
+quarto slides/workshop_first_draft_files/
+
+# Environment
+.env
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db

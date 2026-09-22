@@ -1,0 +1,5 @@
+.env
+output/*.jsonl
+output/*.csv
+__pycache__/
+*.pyc

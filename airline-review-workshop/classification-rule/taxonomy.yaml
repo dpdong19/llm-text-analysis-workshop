@@ -1,0 +1,46 @@
+topics:
+  booking_and_preflight:
+    description: >
+      Booking, ticket changes, check-in, seat selection, and communication before departure.
+
+  flight_operations:
+    description: >
+      Punctuality, delays, cancellations, connections, rebooking, and related assistance.
+
+  airport_and_ground_service:
+    description: >
+      Airport facilities, lounges, boarding, baggage handling, and ground staff service.
+
+  seat_and_cabin_comfort:
+    description: >
+      Seats, space, cleanliness, aircraft condition, temperature, and physical comfort onboard.
+
+  cabin_crew_service:
+    description: >
+      The helpfulness, responsiveness, professionalism, and behaviour of cabin crew.
+
+  food_and_beverages:
+    description: >
+      Meals, snacks, drinks, menu choices, quality, and availability.
+
+  inflight_entertainment_and_connectivity:
+    description: >
+      Entertainment systems, content, headphones, Wi-Fi, and onboard connectivity.
+
+  value_for_money:
+    description: >
+      Price, fees, value, and whether the experience was worth the cost.
+
+  overall_experience:
+    description: >
+      A general evaluation of the journey or airline when no specific service aspect is evaluated.
+
+  other_or_unclear:
+    description: >
+      Evaluated content that does not fit the available topics or is too unclear to classify.
+
+sentiments:
+  - positive
+  - negative
+  - mixed
+  - neutral_or_unclear
