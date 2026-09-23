@@ -265,6 +265,27 @@ AR003,      "New York to Paris. This was one of the many Air France..."
 Point out that stripping the metadata is a deliberate pedagogical choice. In a real project, the structured fields could serve as useful cross-checks.
 :::
 
+## Why classify?
+
+Classification turns **text you can only read** into **data you can count and compare**.
+
+. . .
+
+Once each review has topics and sentiments, you can ask:
+
+- Which aspect of the journey gets the **most complaints**?
+- Do opinions on food or seats differ **by airline or cabin class**?
+- Is a service getting **better or worse over time**?
+- Which quotes best **represent** each topic in a report?
+
+. . .
+
+The review ID links each result back to the original metadata, so the analysis can go further.
+
+::: {.notes}
+Today we stop at the classification step, but this is the reason we do it. Questions 2 and 3 need the metadata we removed earlier: join on review_id.
+:::
+
 ## How would you analyse this without AI?
 
 ::: {.columns}
@@ -795,6 +816,22 @@ The reference set covers 15 of the 50 reviews. It is not a golden standard. It i
 
 ::: {.notes}
 Live demo: run compare.py, show the output. Pick 2-3 disagreements and discuss as a group. compare.py also saves comparison.csv for easy viewing in Excel.
+:::
+
+## Bonus: from labels to insights
+
+Finished early? Try turning your results into a chart.
+
+::: {.prompt-box}
+Using output/results.csv, make a bar chart showing how many mentions of each sentiment every topic has. Save it as output/topic_sentiment.png.
+:::
+
+. . .
+
+This is where classification pays off: **50 reviews become one picture**.
+
+::: {.notes}
+For fast participants during the compare step. If time allows, show one chart on screen before the Menti quiz.
 :::
 
 ## Quick check {.center}

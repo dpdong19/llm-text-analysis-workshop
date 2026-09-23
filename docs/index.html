@@ -554,6 +554,35 @@ AR003,      "New York to Paris. This was one of the many Air France..."
       }</style></aside>
 </div>
 </section>
+<section id="why-classify" class="slide level2">
+<h2>Why classify?</h2>
+<p>Classification turns <strong>text you can only read</strong> into <strong>data you can count and compare</strong>.</p>
+<div class="fragment">
+<p>Once each review has topics and sentiments, you can ask:</p>
+<ul>
+<li>Which aspect of the journey gets the <strong>most complaints</strong>?</li>
+<li>Do opinions on food or seats differ <strong>by airline or cabin class</strong>?</li>
+<li>Is a service getting <strong>better or worse over time</strong>?</li>
+<li>Which quotes best <strong>represent</strong> each topic in a report?</li>
+</ul>
+</div>
+<div class="fragment">
+<p>The review ID links each result back to the original metadata, so the analysis can go further.</p>
+<aside class="notes">
+<p>Today we stop at the classification step, but this is the reason we do it. Questions 2 and 3 need the metadata we removed earlier: join on review_id.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
 <section id="how-would-you-analyse-this-without-ai" class="slide level2">
 <h2>How would you analyse this without AI?</h2>
 <div class="columns">
@@ -1302,6 +1331,29 @@ AR003,      "New York to Paris. This was one of the many Air France..."
 </ul>
 <aside class="notes">
 <p>Live demo: run compare.py, show the output. Pick 2-3 disagreements and discuss as a group. compare.py also saves comparison.csv for easy viewing in Excel.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="bonus-from-labels-to-insights" class="slide level2">
+<h2>Bonus: from labels to insights</h2>
+<p>Finished early? Try turning your results into a chart.</p>
+<div class="prompt-box">
+<p>Using output/results.csv, make a bar chart showing how many mentions of each sentiment every topic has. Save it as output/topic_sentiment.png.</p>
+</div>
+<div class="fragment">
+<p>This is where classification pays off: <strong>50 reviews become one picture</strong>.</p>
+<aside class="notes">
+<p>For fast participants during the compare step. If time allows, show one chart on screen before the Menti quiz.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
