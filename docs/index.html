@@ -594,44 +594,57 @@ AR003,      "New York to Paris. This was one of the many Air France..."
 </section>
 <section id="the-tension-we-are-trying-to-resolve" class="slide level2">
 <h2>The tension we are trying to resolve</h2>
-<div style="font-size: 0.95em;">
+<div style="font-size: 0.8em;">
 <table class="caption-top">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
 <th></th>
 <th>Manual coding</th>
+<th>Supervised ML</th>
 <th>LLM-assisted workflow</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td><strong>What you need to start</strong></td>
+<td>Codebook + trained coders</td>
+<td>Hundreds to thousands of labelled examples</td>
+<td>Prompt + taxonomy + a small reference set</td>
+</tr>
+<tr class="even">
 <td><strong>Speed</strong></td>
 <td>Slow</td>
+<td>Fast once trained</td>
 <td>Fast</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Consistency</strong></td>
 <td>Depends on coder fatigue</td>
+<td>Very consistent</td>
 <td>Depends on prompt and model</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Transparency</strong></td>
-<td>Codebook + training</td>
+<td>Codebook + coder training</td>
+<td>Labels visible, model logic opaque</td>
 <td>Prompt + taxonomy + inspection</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Scale</strong></td>
 <td>Dozens to hundreds</td>
+<td>Millions, very cheap</td>
 <td>Hundreds to thousands</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Judgement</strong></td>
 <td>Human throughout</td>
+<td>Human at labelling and evaluation</td>
 <td>Human at design and evaluation</td>
 </tr>
 </tbody>
@@ -642,6 +655,7 @@ AR003,      "New York to Paris. This was one of the many Air France..."
 <p>We are <strong>changing where and how the researcher’s judgement is applied</strong>.</p>
 <aside class="notes">
 <p>This is the key framing. The workshop is about making the human contribution more deliberate — designing the task specification, inspecting outputs, and evaluating disagreements — rather than removing it.</p>
+<p>On supervised ML: LLMs remove the need for a large training set, but not for a gold standard. It moves from training to checking; our reference set plays that role. Supervised ML still wins at very large scale, when strict reproducibility matters, or when data cannot leave your machine. A common hybrid: label a sample with an LLM, then train a small model on it.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;

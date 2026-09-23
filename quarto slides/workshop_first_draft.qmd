@@ -297,15 +297,16 @@ Ask participants if any of them have done manual content analysis or qualitative
 
 ## The tension we are trying to resolve
 
-<div style="font-size: 0.95em;">
+<div style="font-size: 0.8em;">
 
-| | Manual coding | LLM-assisted workflow |
-|---|---|---|
-| **Speed** | Slow | Fast |
-| **Consistency** | Depends on coder fatigue | Depends on prompt and model |
-| **Transparency** | Codebook + training | Prompt + taxonomy + inspection |
-| **Scale** | Dozens to hundreds | Hundreds to thousands |
-| **Judgement** | Human throughout | Human at design and evaluation |
+| | Manual coding | Supervised ML | LLM-assisted workflow |
+|---|---|---|---|
+| **What you need to start** | Codebook + trained coders | Hundreds to thousands of labelled examples | Prompt + taxonomy + a small reference set |
+| **Speed** | Slow | Fast once trained | Fast |
+| **Consistency** | Depends on coder fatigue | Very consistent | Depends on prompt and model |
+| **Transparency** | Codebook + coder training | Labels visible, model logic opaque | Prompt + taxonomy + inspection |
+| **Scale** | Dozens to hundreds | Millions, very cheap | Hundreds to thousands |
+| **Judgement** | Human throughout | Human at labelling and evaluation | Human at design and evaluation |
 
 </div>
 
@@ -317,6 +318,8 @@ We are **changing where and how the researcher's judgement is applied**.
 
 ::: {.notes}
 This is the key framing. The workshop is about making the human contribution more deliberate — designing the task specification, inspecting outputs, and evaluating disagreements — rather than removing it.
+
+On supervised ML: LLMs remove the need for a large training set, but not for a gold standard. It moves from training to checking; our reference set plays that role. Supervised ML still wins at very large scale, when strict reproducibility matters, or when data cannot leave your machine. A common hybrid: label a sample with an LLM, then train a small model on it.
 :::
 
 # 1. Start with the task
