@@ -673,7 +673,7 @@ Live demo: run all 50, show the terminal summary, open the CSV and skim. Give pa
 
 ## Compare with the reference set
 
-Copy `reference_set_final.csv` from the shared materials folder into your project folder. Then:
+`reference_set_final.csv` should be in your project folder (if missing, download it again from the GitHub repo). Then:
 
 ::: {.prompt-box}
 Run compare.py to compare my results with the instructor reference set. Show me where we disagree and why.
@@ -689,6 +689,25 @@ The reference set covers 15 of the 50 reviews. It is not a golden standard. It i
 
 ::: {.notes}
 Live demo: run compare.py, show the output. Pick 2-3 disagreements and discuss as a group. compare.py also saves comparison.csv for easy viewing in Excel.
+:::
+
+## Quick check {.center}
+
+:::: {.columns}
+::: {.column width="45%"}
+![](menti_qr.png){width="85%"}
+:::
+::: {.column width="55%"}
+<br>
+
+Go to **menti.com**
+
+Code: **5570 3604**
+:::
+::::
+
+::: {.notes}
+~8-10 min. 5 MCQs + 1 open question (where could you use this in your own work?). Use the open answers as a lead-in to wrap-up.
 :::
 
 # 6. Wrap up
@@ -749,11 +768,13 @@ The trade-off: a general-purpose LLM can explain *why* it chose a label (useful 
 This is optional and brief. Just plant the seed that purpose-built models exist for classification tasks. Link: typesafe.ai
 :::
 
-## Questions and discussion
+## Questions and discussion {.nostretch}
 
 - What kind of text data do you work with?
 - Where could a similar workflow help?
 - What would be the hardest part to specify for your task?
+
+![](feedback.png){width="58%" fig-align="center"}
 
 # Appendix
 
