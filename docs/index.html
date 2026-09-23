@@ -217,6 +217,31 @@ Danping
 
   <p class="date">2026-09-23</p>
 </section>
+<section id="while-we-wait-get-ready" class="slide level2">
+<h2>While we wait: get ready</h2>
+<ol type="1">
+<li><strong>Open the slides</strong> on your laptop: <strong>smu.sg/agentic-text</strong></li>
+<li><strong>Download the project folder</strong> from <a href="https://github.com/dpdong19/llm-text-analysis-workshop">github.com/dpdong19/llm-text-analysis-workshop</a>: green <strong>Code</strong> button → <strong>Download ZIP</strong> → unzip it</li>
+<li><strong>Open your coding agent</strong> (Claude Code, Codex, …)</li>
+<li><strong>Check Python 3.10+ is installed</strong> (when installing, tick “Add Python to PATH”)</li>
+<li><strong>Have your API key ready.</strong> No key? We will provide one.</li>
+</ol>
+<p><br></p>
+<p><strong>Not sure about anything?</strong> Raise your hand and we will come to you.</p>
+<aside class="notes">
+<p>Leave this up while people arrive. Helpers walk around.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section>
 <section id="welcome" class="title-slide slide level1 center">
 <h1>Welcome</h1>
@@ -224,7 +249,7 @@ Danping
 </section>
 <section id="what-we-are-doing-today" class="slide level2">
 <h2>What we are doing today</h2>
-<p>We will take a <strong>real text classification task</strong> and turn it into a small, inspectable workflow.</p>
+<p>Today we will build a small workflow that sorts <strong>real airline reviews</strong> by topic and sentiment, with an AI coding agent writing the code.</p>
 <div class="fragment">
 <p>By the end, you should be able to:</p>
 <ul>
@@ -284,6 +309,29 @@ Danping
 </div>
 <aside class="notes">
 <p>Set expectations: some talk first, then most of the time is hands-on. Mention the short Menti quiz at the end so people are not surprised.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="before-we-start" class="slide level2">
+<h2>Before we start</h2>
+<ul>
+<li><strong>Join in the way that suits you.</strong> Follow along, pair up with a neighbour, or just watch the demo. All are fine.</li>
+<li><strong>All prompts are on the slides</strong> at <strong>smu.sg/agentic-text</strong>. Copy and paste, no need to type.</li>
+<li><strong>Your results will differ from mine.</strong> Different agents and models write different code and make different calls. That is expected, not a mistake.</li>
+<li><strong>Stuck on set-up?</strong> Raise your hand. A colleague will come to help.</li>
+<li><strong>Ahead of the group?</strong> Keep going, or try a different model.</li>
+</ul>
+<aside class="notes">
+<p>Many people are installing Python or a coding agent for the first time today. Lower the pressure: watching is a perfectly good way to take part.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1049,7 +1097,7 @@ AR003,      "New York to Paris. This was one of the many Air France..."
 </div>
 <p>After this, add your API key to <code>.env</code>.</p>
 <div class="fragment">
-<p>If you have your own API key, use it. Otherwise, use the shared key provided.</p>
+<p>Your agent will <strong>ask for permission</strong> to run commands like <code>pip install</code>. Read what it wants to do, then allow it.</p>
 <aside class="notes">
 <p>Give participants a moment to set up. Help anyone stuck on Python/pip issues. Remind them the model is claude-haiku-4-5-20251001 (cheapest option).</p>
 <style type="text/css">
@@ -1064,6 +1112,30 @@ AR003,      "New York to Paris. This was one of the many Air France..."
           display:block!important;
       }</style></aside>
 </div>
+</section>
+<section id="using-an-api-key" class="slide level2">
+<h2>Using an API key</h2>
+<p>Use <strong>your own key</strong> if you have one. No key? <strong>Raise your hand</strong> and we will send you one.</p>
+<p>If you use the shared key:</p>
+<ul>
+<li>Use it <strong>only for today’s workshop</strong>. Do not share or post it anywhere.</li>
+<li>Test with <strong><code>--limit 3</code></strong> before running all 50 reviews.</li>
+<li>Do not ask the agent to send requests <strong>in parallel</strong>. Everyone shares the same rate limit.</li>
+<li>The key will be <strong>disabled after the workshop</strong>.</li>
+</ul>
+<aside class="notes">
+<p>Colleagues send the shared key individually. If many 429 / rate-limit errors appear, someone has probably parallelised their script.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="step-1-let-the-agent-understand-the-task" class="slide level2">
 <h2>Step 1: Let the agent understand the task</h2>

@@ -26,11 +26,27 @@ execute:
   freeze: auto
 ---
 
+## While we wait: get ready
+
+1. **Open the slides** on your laptop: **smu.sg/agentic-text**
+2. **Download the project folder** from [github.com/dpdong19/llm-text-analysis-workshop](https://github.com/dpdong19/llm-text-analysis-workshop): green **Code** button → **Download ZIP** → unzip it
+3. **Open your coding agent** (Claude Code, Codex, ...)
+4. **Check Python 3.10+ is installed** (when installing, tick "Add Python to PATH")
+5. **Have your API key ready.** No key? We will provide one.
+
+<br>
+
+**Not sure about anything?** Raise your hand and we will come to you.
+
+::: {.notes}
+Leave this up while people arrive. Helpers walk around.
+:::
+
 # Welcome
 
 ## What we are doing today
 
-We will take a **real text classification task** and turn it into a small, inspectable workflow.
+Today we will build a small workflow that sorts **real airline reviews** by topic and sentiment, with an AI coding agent writing the code.
 
 . . .
 
@@ -86,6 +102,18 @@ Keep this brief. The workshop is not primarily about becoming a Python programme
 
 ::: {.notes}
 Set expectations: some talk first, then most of the time is hands-on. Mention the short Menti quiz at the end so people are not surprised.
+:::
+
+## Before we start
+
+- **Join in the way that suits you.** Follow along, pair up with a neighbour, or just watch the demo. All are fine.
+- **All prompts are on the slides** at **smu.sg/agentic-text**. Copy and paste, no need to type.
+- **Your results will differ from mine.** Different agents and models write different code and make different calls. That is expected, not a mistake.
+- **Stuck on set-up?** Raise your hand. A colleague will come to help.
+- **Ahead of the group?** Keep going, or try a different model.
+
+::: {.notes}
+Many people are installing Python or a coding agent for the first time today. Lower the pressure: watching is a perfectly good way to take part.
 :::
 
 ## How we will work
@@ -627,10 +655,25 @@ After this, add your API key to `.env`.
 
 . . .
 
-If you have your own API key, use it. Otherwise, use the shared key provided.
+Your agent will **ask for permission** to run commands like `pip install`. Read what it wants to do, then allow it.
 
 ::: {.notes}
 Give participants a moment to set up. Help anyone stuck on Python/pip issues. Remind them the model is claude-haiku-4-5-20251001 (cheapest option).
+:::
+
+## Using an API key
+
+Use **your own key** if you have one. No key? **Raise your hand** and we will send you one.
+
+If you use the shared key:
+
+- Use it **only for today's workshop**. Do not share or post it anywhere.
+- Test with **`--limit 3`** before running all 50 reviews.
+- Do not ask the agent to send requests **in parallel**. Everyone shares the same rate limit.
+- The key will be **disabled after the workshop**.
+
+::: {.notes}
+Colleagues send the shared key individually. If many 429 / rate-limit errors appear, someone has probably parallelised their script.
 :::
 
 ## Step 1: Let the agent understand the task
