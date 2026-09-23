@@ -248,6 +248,54 @@ Danping
       }</style></aside>
 </div>
 </section>
+<section id="todays-plan" class="slide level2">
+<h2>Today’s plan</h2>
+<div class="agenda">
+<div class="agenda-block agenda-listen">
+<p><span class="agenda-tag">Part 1 · Listen</span></p>
+<p><strong>Why and what</strong></p>
+<ul>
+<li>The dataset</li>
+<li>The classification task</li>
+<li>From chat to workflow</li>
+<li>The tools</li>
+</ul>
+</div>
+<div class="agenda-block agenda-do">
+<p><span class="agenda-tag">Part 2 · Do</span></p>
+<p><strong>Hands-on with a coding agent</strong></p>
+<ul>
+<li>5-min set-up check</li>
+<li>Brief the agent on the task</li>
+<li>Build and test on 3 reviews</li>
+<li>Inspect and refine the prompt</li>
+<li>Scale up to 50 and compare</li>
+</ul>
+</div>
+<div class="agenda-block agenda-reflect">
+<p><span class="agenda-tag">Part 3 · Reflect</span></p>
+<p><strong>Wrap up</strong></p>
+<ul>
+<li>Quick quiz on Menti <span class="agenda-note">bring your phone</span></li>
+<li>Take-aways</li>
+<li>Q&amp;A and feedback</li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>Set expectations: some talk first, then most of the time is hands-on. Mention the short Menti quiz at the end so people are not surprised.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="how-we-will-work" class="slide level2">
 <h2>How we will work</h2>
 <div class="collaboration-loop">
@@ -939,6 +987,31 @@ AR003,      "New York to Paris. This was one of the many Air France..."
 <h1>4. Hands-on</h1>
 
 </section>
+<section id="first-a-5-minute-set-up-check" class="slide level2">
+<h2>First: a 5-minute set-up check</h2>
+<ol type="1">
+<li>The <code>airline-review-workshop</code> folder is downloaded and <strong>unzipped</strong></li>
+<li>Your coding agent (Claude Code, Codex, …) is open <strong>in that folder</strong></li>
+<li>Python works. Ask your agent:</li>
+</ol>
+<div class="prompt-box">
+<p>Check whether Python 3.10 or above is installed on this computer. If not, help me install it.</p>
+</div>
+<p><strong>Stuck?</strong> Raise your hand, or pair up with your neighbour.</p>
+<aside class="notes">
+<p>Give 5 minutes. Walk around. Common issues: Python not on PATH (reopen the agent / terminal, or restart), folder still zipped, agent opened in the wrong folder. People without an agent: pair them up.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="your-workshop-package" class="slide level2">
 <h2>Your workshop package</h2>
 <pre class="text"><code>airline-review-workshop/
@@ -952,6 +1025,7 @@ AR003,      "New York to Paris. This was one of the many Air France..."
 ├── data/
 │   └── airline_reviews_sample_50.csv
 ├── compare.py
+├── reference_set_final.csv
 └── output/</code></pre>
 <p>The classification rules, the data, and the comparison script are ready. The only missing piece is <code>classify.py</code>. That is what we will build.</p>
 <aside class="notes">

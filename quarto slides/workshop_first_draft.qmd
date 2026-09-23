@@ -45,6 +45,49 @@ By the end, you should be able to:
 Keep this brief. The workshop is not primarily about becoming a Python programmer or mastering one model provider. It is about developing a practical mental model for an LLM-assisted research workflow.
 :::
 
+## Today's plan
+
+:::: {.agenda}
+
+::: {.agenda-block .agenda-listen}
+[Part 1 · Listen]{.agenda-tag}
+
+**Why and what**
+
+- The dataset
+- The classification task
+- From chat to workflow
+- The tools
+:::
+
+::: {.agenda-block .agenda-do}
+[Part 2 · Do]{.agenda-tag}
+
+**Hands-on with a coding agent**
+
+- 5-min set-up check
+- Brief the agent on the task
+- Build and test on 3 reviews
+- Inspect and refine the prompt
+- Scale up to 50 and compare
+:::
+
+::: {.agenda-block .agenda-reflect}
+[Part 3 · Reflect]{.agenda-tag}
+
+**Wrap up**
+
+- Quick quiz on Menti [bring your phone]{.agenda-note}
+- Take-aways
+- Q&A and feedback
+:::
+
+::::
+
+::: {.notes}
+Set expectations: some talk first, then most of the time is hands-on. Mention the short Menti quiz at the end so people are not surprised.
+:::
+
 ## How we will work
 
 <div class="collaboration-loop">
@@ -534,6 +577,22 @@ This is the centre of the workshop. The coding agent is not the classifier, the 
 
 # 4. Hands-on
 
+## First: a 5-minute set-up check
+
+1. The `airline-review-workshop` folder is downloaded and **unzipped**
+2. Your coding agent (Claude Code, Codex, ...) is open **in that folder**
+3. Python works. Ask your agent:
+
+::: {.prompt-box}
+Check whether Python 3.10 or above is installed on this computer. If not, help me install it.
+:::
+
+**Stuck?** Raise your hand, or pair up with your neighbour.
+
+::: {.notes}
+Give 5 minutes. Walk around. Common issues: Python not on PATH (reopen the agent / terminal, or restart), folder still zipped, agent opened in the wrong folder. People without an agent: pair them up.
+:::
+
 ## Your workshop package
 
 ```text
@@ -548,6 +607,7 @@ airline-review-workshop/
 ├── data/
 │   └── airline_reviews_sample_50.csv
 ├── compare.py
+├── reference_set_final.csv
 └── output/
 ```
 
